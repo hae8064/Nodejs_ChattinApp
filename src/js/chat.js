@@ -16,6 +16,9 @@ function send(){
         name: nickname.value,
         msg: chatInput.value
     }
+
+    chatInput.value = "";           //전송 버튼을 누르면 원래 내용 삭제
+
     socket.emit("chatting", param);
 }
 
